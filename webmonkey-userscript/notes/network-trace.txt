@@ -1,0 +1,29 @@
+https://www.livenewsmag.com/category/american/
+
+https://www.livenewsmag.com/msnbc-news-live-stream/
+    <script type="text/JavaScript">
+    var playerInstance = jwplayer("myElement");
+    playerInstance.setup({
+        file: "https://1420543146.rsc.cdn77.org/QiscUswKeE0gEByMqt7WGA==,1630562775/LS-ATL-54548-10/index.m3u8",
+        autostart: false,
+        width: '100%',
+        aspectratio: '16:10',
+        androidhls: false,
+        hlsjsdefault: true,
+        logo: {
+            file: '/wp-content/uploads/2016/10/live-news-logo-1.jpg',
+            hide: 'true',
+            link: 'http://www.livenewson.com/'
+        },
+        abouttext: "LiveNewsOn",
+        aboutlink: "http://www.livenewson.com",
+        cast:{ }
+    });
+    </script>
+
+notes:
+  * HLS video server requires 'Referer' header
+  * plays very nicely on:
+    - ExoAirPlayer
+    - Chromecast via HLS-Proxy
+      * with or without local cache
