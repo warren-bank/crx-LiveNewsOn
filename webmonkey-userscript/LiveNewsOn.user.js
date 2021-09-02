@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         LiveNewsOn
 // @description  Watch videos in external player.
-// @version      1.0.0
+// @version      1.0.1
 // @match        *://livenewson.com/*
 // @match        *://*.livenewson.com/*
 // @match        *://livenewsus.com/*
@@ -12,8 +12,16 @@
 // @match        *://*.livenewsnow.com/*
 // @match        *://livenewswatch.com/*
 // @match        *://*.livenewswatch.com/*
+// @match        *://livenewsworld.com/*
+// @match        *://*.livenewsworld.com/*
 // @match        *://livenewsmag.com/*
 // @match        *://*.livenewsmag.com/*
+// @match        *://livenewstime.com/*
+// @match        *://*.livenewstime.com/*
+// @match        *://newslive.com/*
+// @match        *://*.newslive.com/*
+// @match        *://planetnews.com/*
+// @match        *://*.planetnews.com/*
 // @icon         https://cdn.livenewsnow.com/wp-content/uploads/2019/02/favicon.png
 // @run-at       document-end
 // @grant        unsafeWindow

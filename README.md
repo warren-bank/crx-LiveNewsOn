@@ -11,7 +11,11 @@ Its purpose is to:
   - [livenewsbox.com](https://www.livenewsbox.com/)
   - [livenewsnow.com](https://www.livenewsnow.com/)
   - [livenewswatch.com](https://www.livenewswatch.com/)
+  - [livenewsworld.com](https://www.livenewsworld.com/)
   - [livenewsmag.com](https://www.livenewsmag.com/)
+  - [livenewstime.com](https://livenewstime.com/)
+  - [newslive.com](https://www.newslive.com/)
+  - [planetnews.com](https://planetnews.com/)
 
 #### Legal:
 
