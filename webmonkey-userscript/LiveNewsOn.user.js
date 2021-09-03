@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         LiveNewsOn
 // @description  Watch videos in external player.
-// @version      1.0.1
+// @version      1.0.2
 // @match        *://livenewson.com/*
 // @match        *://*.livenewson.com/*
 // @match        *://livenewsus.com/*
@@ -44,6 +44,21 @@ var user_options = {
   "timeout_ms": {
     "live_videostream":           0
   }
+}
+
+// ----------------------------------------------------------------------------- helpers
+
+var make_element = function(elementName, innerContent, isText) {
+  var el = unsafeWindow.document.createElement(elementName)
+
+  if (innerContent) {
+    if (isText)
+      el.innerText = innerContent
+    else
+      el.innerHTML = innerContent
+  }
+
+  return el
 }
 
 // ----------------------------------------------------------------------------- URL links to tools on Webcast Reloaded website
@@ -144,7 +159,7 @@ var process_dash_url = function(dash_url, vtt_url, referer_url) {
 
 // ----------------------------------------------------------------------------- process video within iframe
 
-var process_live_videostream = function() {
+var obtain_live_videostream_url = function() {
   var regex, scripts, script, video_url
 
   regex = {
@@ -169,6 +184,21 @@ var process_live_videostream = function() {
     return
 
   process_hls_url(video_url)
+}
+
+var update_live_videostream_DOM = function() {
+  var doc, body, style
+
+  doc   = unsafeWindow.document
+  body  = doc.body
+  style = make_element('style', '.pum-overlay {display: none !important;} html.pum-open.pum-open-overlay {overflow: auto !important;}', true)
+
+  body.appendChild(style)
+}
+
+var process_live_videostream = function() {
+  obtain_live_videostream_url()
+  update_live_videostream_DOM()
 }
 
 // ----------------------------------------------------------------------------- bootstrap
