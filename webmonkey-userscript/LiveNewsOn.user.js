@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         LiveNewsOn
 // @description  Watch videos in external player.
-// @version      1.0.3
+// @version      1.0.4
 // @match        *://livenewson.com/*
 // @match        *://*.livenewson.com/*
 // @match        *://livenewsus.com/*
@@ -184,7 +184,7 @@ var obtain_live_videostream_url = function() {
 
   regex = {
     whitespace: /[\r\n\t]+/g,
-    video_url:  /^.*\s+file:\s+['"]([^'"]+m3u8[^'"]*)['"].*$/
+    video_url:  /^.*\s+(?:['"]?(?:file)['"]?\s*:|(?:streamURL)\s*=)\s*['"]([^'"]+m3u8[^'"]*)['"].*$/
   }
 
   scripts = unsafeWindow.document.querySelectorAll('script:not([src])')
